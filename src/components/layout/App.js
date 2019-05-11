@@ -17,9 +17,12 @@ class App extends Component {
     return (
       <div className="App">
         <Router basename={process.env.PUBLIC_URL}>
+        <div className="site-wrap">
+      
           <Header />
           <Body />
           <Footer />
+          </div>
         </Router>
       </div>
     );
