@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import HomePage from "../../pages/HomePage";
 
 import("./Body.css")
   .then()
@@ -8,19 +9,14 @@ import("./Body.css")
 export default class Body extends Component {
   render() {
     return (
-      <div className="Body">
-        <div className="container-fluid">
-          <div className="row">
-            <Switch>
-              {/*<Route exact path="/" component={LifeCycleReactComponent} /> */}
-
-              <Route exact path="/jquery" render={() => <div>jquery</div>} />
-              <Route exact path="/android" render={() => <div>android</div>} />
-              <Route render={() => <div>404 Page Not Found</div>} />
-            </Switch>
-          </div>
-        </div>
-      </div>
+      
+        <Switch>
+          {/*<Route exact path="/" component={LifeCycleReactComponent} /> */}
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/jquery" render={() => <div>jquery</div>} />
+          <Route exact path="/android" render={() => <div>android</div>} />
+          <Route render={() => <div>404 Page Not Found</div>} />
+        </Switch>
     );
   }
 }
