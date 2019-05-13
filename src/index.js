@@ -4,7 +4,6 @@ import './lib'
 import './styles/index.css';
 
 
-
 import App from './components/layout/App';
 import * as serviceWorker from './serviceWorker';
 
